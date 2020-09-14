@@ -20,19 +20,22 @@ def get_indices_of_item_weights(weights, length, limit):
         # return the two items as a tuple
         if missingVal in weightsDict:
             missingIdx = weightsDict[missingVal]
-            print("~~~~~~~")
-            if missingVal > weight:
-                print("values")
-                print((missingVal, weight))
-                print("indexes")
-                print((missingIdx, idx))
-                return(missingIdx, idx)
-            else:
-                print("values")
-                print((weight, missingVal))
-                print("indexes")
-                print((idx, missingIdx))
-                return (idx, missingIdx)
+
+            return (idx, missingIdx)
+
+            # print("~~~~~~~")
+            # if missingVal > weight:
+            #     print("values")
+            #     print((missingVal, weight))
+            #     print("indexes")
+            #     print((missingIdx, idx))
+            #     return(missingIdx, idx)
+            # else:
+            #     print("values")
+            #     print((weight, missingVal))
+            #     print("indexes")
+            #     print((idx, missingIdx))
+            #     return (idx, missingIdx)
                 
         # if check fails, add the current weight to the dict
         weightsDict[weight] = idx
