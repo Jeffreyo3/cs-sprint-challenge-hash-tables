@@ -51,5 +51,16 @@ class TestEx2(unittest.TestCase):
         result.sort()
         self.assertTrue(result == [1,2,3])
 
+    def test_single(self):
+        arrays = [[1,2,3,4]]
+        result = intersection(arrays)
+        result.sort()
+        self.assertTrue(result == [1,2,3,4])
+
+    def test_none(self):
+        arrays = []
+        result = intersection(arrays)
+        self.assertTrue(result == None)
+
 if __name__ == '__main__':
     unittest.main()
